@@ -1,0 +1,33 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+.venv/
+venv/
+.env
+.env.*
+
+# Generated benchmark state and logs
+runs/
+outputs/
+logs/
+*.log
+
+# Model weights and generated media are external artifacts
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.mp4
+*.mov
+*.avi
+*.gif
+

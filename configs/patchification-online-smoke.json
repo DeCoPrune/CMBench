@@ -1,0 +1,15 @@
+{
+  "case_id": "anime_crystal_cavern_lab_clip03",
+  "checkpoint": "/mnt/workspace/users/xiaozeqi/ckpts/robbyant/lingbot-world-v2-14b-causal-fast",
+  "dataset_version": "CMBench_NewRecipe/current103",
+  "method": "patchification",
+  "method_params": {
+    "update_each_chunk": true
+  },
+  "protocol": "current103_canonical_v2",
+  "request_file": "/mnt/workspace/users/xiaozeqi/code/forcingkv_cmbench_ablation_reindex_20260911/configs/experiments/reindex39_seed2_other/patchification-without.jsonl",
+  "rope_reindex": {
+    "mode": "off"
+  },
+  "seed": 2
+}

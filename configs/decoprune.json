@@ -1,0 +1,17 @@
+{
+  "case_id": "syn_001_reappear_01",
+  "checkpoint": "/path/to/lingbot-world-v2-14b-causal-fast",
+  "dataset_version": "Aoraku/CMBench",
+  "method": "decoprune",
+  "method_params": {
+    "step_index": 2,
+    "generation_step_index": 2,
+    "threshold": 0.1
+  },
+  "protocol": "cmbench-116",
+  "request_file": "runs/inputs/requests.jsonl",
+  "rope_reindex": {
+    "mode": "all_bands"
+  },
+  "seed": 2
+}

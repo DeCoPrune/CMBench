@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "forcingkv-cmbench-rebuild"
+version = "0.1.0"
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+lingbot = [
+  "accelerate>=1.1.1",
+  "diffusers>=0.31.0",
+  "easydict",
+  "einops",
+  "flash-attn",
+  "ftfy",
+  "imageio",
+  "imageio-ffmpeg",
+  "numpy>=1.23.5,<2",
+  "opencv-python>=4.9.0.80",
+  "scipy",
+  "tokenizers>=0.20.3",
+  "torch>=2.4.0",
+  "torchvision>=0.19.0",
+  "tqdm",
+  "transformers>=4.49.0",
+]
+
+[project.scripts]
+cmbench = "cmbench_rebuild.cli:main"
+cmbench-production = "cmbench_rebuild.production:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
