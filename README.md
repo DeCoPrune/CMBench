@@ -2,12 +2,12 @@
 
 **DeCoPrune: Efficient KV-Cache Pruning for Autoregressive Video Diffusion via Denoising Consistency**
 
-**Zeqi Xiao<sup>1,*</sup> · Qingle Liu<sup>2,*</sup> · Kaiwen Zhang<sup>1</sup> · Yifan Zhou<sup>1</sup> · Zihan Ding<sup>3</sup> · Xingang Pan<sup>1,†</sup>**
+**Zeqi Xiao<sup>1,&#42;</sup> · Qingle Liu<sup>1,2,&#42;</sup> · Kaiwen Zhang<sup>1</sup> · Yifan Zhou<sup>1</sup> · Zihan Ding<sup>3</sup> · Xingang Pan<sup>1</sup>**
 
-<sup>1</sup>Nanyang Technological University · <sup>2</sup>Tsinghua University · <sup>3</sup>Princeton University<br>
-<sup>*</sup>Equal contribution. <sup>†</sup>Corresponding author.
+<sup>1</sup>S-Lab, Nanyang Technological University · <sup>2</sup>Tsinghua University · <sup>3</sup>Princeton University<br>
+<sup>&#42;</sup>Equal contribution.
 
-[Project page](https://decoprune.github.io/) · [CMBench dataset](https://huggingface.co/datasets/Aoraku/CMBench)
+[Paper](https://arxiv.org/abs/2609.39096) · [Project page](https://decoprune.github.io/) · [Code](https://github.com/DeCoPrune/CMBench) · [CMBench dataset](https://huggingface.co/datasets/Aoraku/CMBench)
 
 This repository provides DeCoPrune and a generation/evaluation harness for CMBench with LingBot World v2. DeCoPrune is a training-free KV-cache pruning method for autoregressive video diffusion. It measures each token's denoising difficulty through the discrepancy between an intermediate clean prediction and the final denoised value. High-discrepancy tokens retain distinctive visual evidence in the long-term cache; low-discrepancy tokens can be pruned. Online scoring reuses the generator's denoising predictions. For observed video prefixes, the method re-noises each chunk and compares its context-conditioned prediction with the observed chunk.
 
@@ -33,8 +33,8 @@ Target events occur before the recent view, and multiple events act as distracto
 Production generation requires Linux, CUDA GPUs, and a local LingBot World v2 causal checkpoint. The paper uses four NVIDIA H200 GPUs. Python 3.9 or newer is required; install FFmpeg, including `ffprobe`, for video output and auditing.
 
 ```bash
-git clone https://github.com/xizaoqu/cmbench-rebuild.git
-cd cmbench-rebuild
+git clone https://github.com/DeCoPrune/CMBench.git
+cd CMBench
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
